@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bootstrap.css">
+    <link rel="stylesheet" href="./styles/mystyle.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>The Fashion pet</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container-sm">
+            <h2>Register a new pet</h2>
+            <div class="mb-3">
+                <label>Name: </label>
+                <input class="form-control" type="text" id="txtName">
+            </div>
+            <div class="mb-3">
+                <label>Age: </label>
+                <input class="form-control" type="number" id="txtAge">
+            </div>
+            <div class="mb-3">
+                <label>Gender: </label>
+                <div class="radio-group">
+            
+            
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        Female
+                    </label>
+            </div>
+            <div class="mb-3">
+                <label>Service: </label>
+                <select class="form-select"  id="txtService">
+                    <option value="" disabled selected>-- Select an option --</option>
+                    <option value="grooming">Gromming</option>
+                    <option value="nails">Nails</option>
+                    <option value="vaccines">Vaccines</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-dark" onclick="register()">Register</button>
+            </div>
+        </div>
+
+        <div class="container-sm">
+            <h2>Registered pets</h2>
+            <div>
+                <p>Total= <span id="total">3</span></p>
+            </div>
+            <div id="pets">
+                <!-- all the pets are going to be displayed here!!! -->
+            </div>
+
+            <table>
+                <thead>
+
+                </thead>
+                <tbody>
+                    <!-- here the rows are displayed-->
+                </tbody>
+            </table>
+        </div>
+
+
+    </main>
+    <script src="./scripts/register.js"></script>
+    <script src="./scripts/display.js"></script>
+</body>
+</html>
+    <table id="myTable" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Services</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Rows will be added here -->
+        </tbody>
+    </table>
+
+    <script>
+        const tableBody = document.getElementById('tableBody');
+
+        // Example data
+        const data = [
+            { col1: 'Scooby Doo', col2: '99', col3: 'Male', col4: 'Grooming' },
+            { col1: 'Scrappy Doo', col2: '88', col3: 'Male', col4: 'Vaccines'},
+            { col1: 'Speedy Gonzalez', col2: '3', col3: 'Male', col4: 'Grooming'}, 
+            ];
+
+        // Function to add rows
+        function addRows() {
+            data.forEach(item => {
+                const row = `<tr>
+                                <td>${item.col1}</td>
+                                <td>${item.col2}</td>
+                                <td>${item.col3}</td>
+                                <td>${item.col4}</td>
+                            </tr>`;
+                tableBody.innerHTML += row; // Add the row to the table body
+            });
+        }
+
+        // Call the function to add rows
+        addRows();
+    </script>
+</body>
+</html>
