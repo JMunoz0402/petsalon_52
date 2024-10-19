@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/bootstrap.css">
+        <link rel="stylesheet" href="./styles/mystyle.css">
+        <title>Document</title>
+    </head>
+    <body>
+    
+        <header>
+            <div>
+                <h1>The Fashion pet</h1>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="register.html">Register</a>
+                    <a href="services.html">Services</a>
+                </nav>
+            </div>
+        </header>
+        <main class="container">
+            <h2>Register a new service</h2>
+
+            <div class="mb-3">
+                <label class="form-label">Name: </label>
+                <input class="form-control" type="text" id="txtName">
+            </div>
+            <div class="mb-3">
+                <label class=""form-label>Age: </label>
+                <input class="form-control" type="number" id="txtAge">
+            </div>
+            <div class="mb-3">
+                <label class=""form-label>Services: </label>
+                <input class="form-control" type="number" id="txtService">
+            </div>
+            <div>
+                <button id="btnRegister" class="btn btn-primary">Register</button>
+            </div>
+        </main>
+        <div class="payment-form">
+            <h2>Payment Details</h2>
+            <form action="/process-payment" method="POST">
+                <div class="form-group">
+                    <label for="name">Name on Card:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="exp-month">Expiry Month:</label>
+                    <input type="text" id="exp-month" name="exp-month" required placeholder="MM">
+                </div>
+        
+                <div class="form-group">
+                    <label for="exp-year">Expiry Year:</label>
+                    <input type="text" id="exp-year" name="exp-year" required placeholder="YY">
+                </div>
+        
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+        
+                <div class="form-group">
+                    <button type="submit">Submit Payment</button>
+                </div>
+            </form>
+        </div>
+
+        <script src="./plugins/jQuery3.7.1.js"></script>
+        <script src="./scripts/services.js"></script>
+
+
+
+</body>
+</html>
