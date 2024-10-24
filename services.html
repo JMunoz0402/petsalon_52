@@ -1,81 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles/bootstrap.css">
-        <link rel="stylesheet" href="./styles/mystyle.css">
-        <title>Document</title>
-    </head>
-    <body>
-    
-        <header>
-            <div>
-                <h1>The Fashion pet</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fashion Pet</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/mystyle.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Header Image Section -->
+        <div class="container-fluid p-0">
+            <img src="img/Unknown.jpeg" alt="The Fashion Pet Banner" class="img-fluid w-100">
+        </div>
+
+        <!-- Navigation Section -->
+        <div class="bg-light py-3 border-bottom">
+            <div class="container d-flex justify-content-between align-items-center">
+                <h1 class="h3">The Fashion Pet</h1>
                 <nav>
-                    <a href="index.html">Home</a>
-                    <a href="register.html">Register</a>
-                    <a href="services.html">Services</a>
+                    <a href="index.html" class="btn btn-link">Home</a>
+                    <a href="register.html" class="btn btn-link">Register</a>
+                    <a href="services.html" class="btn btn-link">Services</a>
+                    <a href="aboutus.html" class="btn btn-link">About Us</a>
                 </nav>
             </div>
-        </header>
-        <main class="container">
-            <h2>Register a new service</h2>
+        </div>
+    </header>
 
+    <!-- Main Section: Register a New Service -->
+    <main class="container my-5">
+        <h2>Register a New Service</h2>
+        <form>
             <div class="mb-3">
-                <label class="form-label">Name: </label>
-                <input class="form-control" type="text" id="txtName">
+                <label for="txtName" class="form-label">Name:</label>
+                <input class="form-control" type="text" id="txtName" name="name">
             </div>
             <div class="mb-3">
-                <label class=""form-label>Age: </label>
-                <input class="form-control" type="number" id="txtAge">
+                <label for="txtAge" class="form-label">Age:</label>
+                <input class="form-control" type="number" id="txtAge" name="age">
             </div>
             <div class="mb-3">
-                <label class=""form-label>Services: </label>
-                <input class="form-control" type="number" id="txtService">
+                <label for="txtService" class="form-label">Services:</label>
+                <input class="form-control" type="text" id="txtService" name="service">
             </div>
             <div>
                 <button id="btnRegister" class="btn btn-primary">Register</button>
             </div>
-        </main>
-        <div class="payment-form">
-            <h2>Payment Details</h2>
-            <form action="/process-payment" method="POST">
-                <div class="form-group">
-                    <label for="name">Name on Card:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-        
-                <div class="form-group">
-                    <label for="card-number">Card Number:</label>
-                    <input type="text" id="card-number" name="card-number" required>
-                </div>
-        
-                <div class="form-group">
-                    <label for="exp-month">Expiry Month:</label>
-                    <input type="text" id="exp-month" name="exp-month" required placeholder="MM">
-                </div>
-        
-                <div class="form-group">
-                    <label for="exp-year">Expiry Year:</label>
-                    <input type="text" id="exp-year" name="exp-year" required placeholder="YY">
-                </div>
-        
-                <div class="form-group">
-                    <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" name="cvv" required>
-                </div>
-        
-                <div class="form-group">
-                    <button type="submit">Submit Payment</button>
-                </div>
-            </form>
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 The Fashion Pet. All Rights Reserved.</p>
+            <p>
+                <a href="privacy.html" class="text-white">Privacy Policy</a> | 
+                <a href="terms.html" class="text-white">Terms of Service</a>
+            </p>
+            <p>Follow us on:
+                <a href="#" class="text-white">Facebook</a> |
+                <a href="#" class="text-white">Instagram</a> |
+                <a href="#" class="text-white">Twitter</a>
+            </p>
         </div>
+    </footer>
 
-        <script src="./plugins/jQuery3.7.1.js"></script>
-        <script src="./scripts/services.js"></script>
-
-
-
+    <!-- JavaScript and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="./scripts/storeManager.js"></script>
+    <script src="./scripts/services.js"></script>
+    
 </body>
+
 </html>
+
