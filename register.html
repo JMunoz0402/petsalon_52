@@ -1,144 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bootstrap.css">
     <link rel="stylesheet" href="./styles/mystyle.css">
-    <title>Document</title>
+    <title>The One Stop Pet Care</title>
 </head>
+
 <body>
 
+    
     <header>
-        <div>
-            <h1>The Fashion pet</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="register.html">Register</a>
-                <a href="services.html">Services</a>
-            </nav>
+        <div class="container-fluid p-0">
+            
+            <img src="img/Unknown.jpeg" alt="The Fashion Pet Banner" class="img-fluid w-100">
+        </div>
+
+        <div class="bg-light py-3 border-bottom">
+            <div class="container d-flex justify-content-between align-items-center">
+                <h1 class="h3">The One Stop Pet Care</h1>
+                <nav>
+                    <a href="index.html" class="btn btn-link">Home</a>
+                    <a href="register.html" class="btn btn-link">Register</a>
+                    <a href="services.html" class="btn btn-link">Services</a>
+                    <a href="aboutus.html" class="btn btn-link">About Us</a>
+                </nav>
+            </div>
         </div>
     </header>
-    <main>
+
+    
+    <main class="container my-5">
         <div class="container-sm">
-            <h2>Register a new pet</h2>
-            <div class="mb-3">
-                <label>Name: </label>
-                <input class="form-control" type="text" id="txtName">
-            </div>
-            <div class="mb-3">
-                <label>Age: </label>
-                <input class="form-control" type="number" id="txtAge">
-            </div>
-            <div class="mb-3">
-                <label>Gender: </label>
-                <input class="form-control" type="text" id="txtGender">
-            </div>
-            <div class="mb-3">
-                <label>Service: </label>
-                <select class="form-select"  id="txtService">
-                    <option value="" disabled selected>-- Select an option --</option>
-                    <option value="grooming">Gromming</option>
-                    <option value="nails">Nails</option>
-                    <option value="vaccines">Vaccines</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <button class="btn btn-dark" onclick="register()">Register</button>
-            </div>
+            <h2>Register a New Pet</h2>
+            <form id="petForm">
+                <div class="mb-3">
+                    <label for="txtName" class="form-label">Name:</label>
+                    <input class="form-control" type="text" id="txtName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="txtAge" class="form-label">Age:</label>
+                    <input class="form-control" type="number" id="txtAge" required>
+                </div>
+                <div class="mb-3">
+                    <label for="txtGender" class="form-label">Gender:</label>
+                    <input class="form-control" type="text" id="txtGender" required>
+                </div>
+                <div class="mb-3">
+                    <label for="txtService" class="form-label">Service:</label>
+                    <select class="form-select" id="txtService" required>
+                        <option value="" disabled selected>-- Select an option --</option>
+                        <option value="grooming">Grooming</option>
+                        <option value="nails">Nails</option>
+                        <option value="vaccines">Vaccines</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-dark">Register</button>
+                </div>
+            </form>
         </div>
 
-        <div class="container-sm">
-            <h2>Registered pets</h2>
-            <div>
-                <p>Total= <span id="total">hello</span></p>
-            </div>
-            <div id="pets">
-                <!-- all the pets are going to be displayed here!!! -->
-            </div>
+        
+        <div class="container-sm mt-5">
+            <h2>Registered Pets</h2>
+            <p>Total Pets Registered: <span id="total">0</span></p>
 
-            <table>
             <table class="table">
                 <thead>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-                    <th>Service</th>
-                    <th>Action</th>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Service</th>
+                        <th>Action</th>
+                    </tr>
                 </thead>
-                <tbody>
                 <tbody id="petTable">
-                    <!-- here the rows are displayed-->
+                    
                 </tbody>
             </table>
         </div>
+    </main>
 
-        <body>
-            <h1>In for a Treat</h1>
-            <table>
-                <tr>
-                    <th>Services</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Grooming</td>
-                    <td>$75.00</td>
-                </tr>
-                <tr>
-                    <td>Vaccines</td>
-                    <td>$45.00</td>
-                </tr>
-                <tr>
-                    <td>Nail trim/Teeth Brushing</td>
-                    <td>$60.00</td>
-                </tr>
-                <tr>
-                    <td>Micro chipping</td>
-                    <td>$90.00</td>
-                </tr>
-            </table>
-        </body>
-
-    <div class=".Payment">       
-        <title>Payment Form</title>
-    </div>
     
-    <div class="payment-form">
-    <h2>Payment Details</h2>
-    <form action="/process-payment" method="POST">
-        <div class="form-group">
-            <label for="name">Name on Card:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
+    <script src="./scripts/services.js"></script>
+    <script src="./scripts/register.js"></script>
+    <script src="./scripts/display.js"></script>
 
-        <div class="form-group">
-            <label for="card-number">Card Number:</label>
-            <input type="text" id="card-number" name="card-number" required>
-        </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-        <div class="form-group">
-            <label for="exp-month">Expiry Month:</label>
-            <input type="text" id="exp-month" name="exp-month" required placeholder="MM">
-        </div>
-
-        <div class="form-group">
-            <label for="exp-year">Expiry Year:</label>
-            <input type="text" id="exp-year" name="exp-year" required placeholder="YY">
-        </div>
-
-        <div class="form-group">
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required>
-        </div>
-
-        <div class="form-group">
-            <button type="submit">Submit Payment</button>
-        </div>
-    </form>
-</div>
-
-        </main>
-        <script src="./Scripts/register.js"></script>
-        <script src="./Scripts/display.js"></script>
 </body>
+
 </html>

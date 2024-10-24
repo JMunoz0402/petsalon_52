@@ -6,26 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Fashion Pet</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles/mystyle.css">
 </head>
 
 <body>
 
-    <!-- Header Section -->
+    
     <header>
-        <!-- Header Image Section -->
+        
         <div class="container-fluid p-0">
             <img src="img/Unknown.jpeg" alt="The Fashion Pet Banner" class="img-fluid w-100">
         </div>
 
-        <!-- Navigation Section -->
+        
         <div class="bg-light py-3 border-bottom">
             <div class="container d-flex justify-content-between align-items-center">
-                <h1 class="h3">The Fashion Pet</h1>
+                <h1 class="h3">The One Stop Pet Care</h1>
                 <nav>
                     <a href="index.html" class="btn btn-link">Home</a>
                     <a href="register.html" class="btn btn-link">Register</a>
@@ -36,7 +34,44 @@
         </div>
     </header>
 
-    <!-- Main Section: Register a New Service -->
+    
+    <section class="container my-5">
+        <h2>Dog Grooming Services</h2>
+        <div class="row">
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Basic Grooming</h5>
+                        <p class="card-text">Includes bath, brushing, ear cleaning, and nail trimming.</p>
+                        <p class="card-text"><strong>Price:</strong> $30</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Full Grooming</h5>
+                        <p class="card-text">Includes bath, haircut, ear cleaning, and nail trimming.</p>
+                        <p class="card-text"><strong>Price:</strong> $50</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Luxury Grooming</h5>
+                        <p class="card-text">Includes all full grooming services plus a coat conditioning treatment.</p>
+                        <p class="card-text"><strong>Price:</strong> $70</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <main class="container my-5">
         <h2>Register a New Service</h2>
         <form>
@@ -50,7 +85,12 @@
             </div>
             <div class="mb-3">
                 <label for="txtService" class="form-label">Services:</label>
-                <input class="form-control" type="text" id="txtService" name="service">
+                <select class="form-select" id="txtService" name="service">
+                    <option value="" disabled selected>-- Select a Service --</option>
+                    <option value="basic_grooming">Basic Grooming - $30</option>
+                    <option value="full_grooming">Full Grooming - $50</option>
+                    <option value="luxury_grooming">Luxury Grooming - $70</option>
+                </select>
             </div>
             <div>
                 <button id="btnRegister" class="btn btn-primary">Register</button>
@@ -58,7 +98,7 @@
         </form>
     </main>
 
-    <!-- Footer Section -->
+    
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
             <p>&copy; 2024 The Fashion Pet. All Rights Reserved.</p>
@@ -74,16 +114,13 @@
         </div>
     </footer>
 
-    <!-- JavaScript and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     
-    <!-- Custom Scripts -->
     <script src="./scripts/storeManager.js"></script>
     <script src="./scripts/services.js"></script>
-    
+
 </body>
 
 </html>
-

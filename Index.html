@@ -1,43 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/mystyle.css">
-    <title>Document</title>
+    <title>The One Pet Salon</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar {
+            padding: 20px;
+            text-align: center;
+            
+            background: url('./img/Unknown.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .nav-bar h1 {
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        .nav-bar nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .nav-bar nav a:hover {
+            color: #f39c12;
+            text-decoration: underline;
+        }
+
+        .grid-two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 50px;
+            gap: 20px;
+        }
+
+        .grid-two-column div {
+            padding: 10px;
+        }
+
+        .grid-two-column img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .grid-two-column p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .grid-two-column a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #f39c12;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .grid-two-column a:hover {
+            background-color: #e67e22;
+        }
+
+        .grid-two-column div:first-child {
+            max-width: 500px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: transparent; 
+            color: black; 
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
+    
     <header class="site-init">
-        <div class="nav-bar"></div>
-            <h1>The Fashion pet</h1>
+        <div class="nav-bar">
+            <h1>The One Stop Pet Care</h1>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="register.html">Register</a>
+                <a href="services.html">Services</a>
+                <a href="aboutus.html">About Us</a>
             </nav>
         </div>
-    </header>
+
+        
         <div class="grid-two-column">
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, placeat?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate asperiores temporibus dolores facilis expedita? Similique.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, est modi? Corporis commodi, deserunt ullam delectus et qui nisi reiciendis debitis fugit optio eaque, numquam facilis. Vel laudantium ratione praesentium.</p>
-                <a href="register.html">Book an appointment</a>
+                <h2>Welcome to The One Pet Salon</h2>
+                <p>At The One Pet Salon, we provide your beloved pets with the best grooming services in town! Your furry friends deserve the best, and we are here to make sure they leave feeling pampered and looking their best.</p>
+                <p>From grooming to nail trimming, our expert staff is ready to give your pets the royal treatment. Book your appointment today and experience top-tier pet care!</p>
+                <p>We know your pets are part of the family, and at our salon, they are treated like royalty. Schedule an appointment today to give your pets the spa day they deserve.</p>
+                <a href="register.html">Book an Appointment</a>
             </div>
-            <!-- Section to display total number of pets -->
-        <div>
-            <h3>Total Pets Registered: <span id="petCount">0</span></h3>
-        </div>
-            <!-- Section to list pet names -->
-        <div>
-            <h3>Registered Pets:</h3>
-            <ul id="petList"></ul>
-        </div>
             <div>
-                <img src="./img/puppy.png" alt="puppy">
+                <img src="./img/puppy.png" alt="Cute puppy at the salon">
             </div>
         </div>
     </header>
+
     
+    <footer>
+        <p>&copy; 2024 The One Pet Salon. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
